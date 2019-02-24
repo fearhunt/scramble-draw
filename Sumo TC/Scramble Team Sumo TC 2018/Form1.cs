@@ -25,6 +25,79 @@ namespace Drawing_Team_TC_Label
 
         }
 
+        public Label[] labels = new Label[63];
+       // public labels = new System.Windows.Forms.Label[63];
+        private void MyForm_Load(object sender, EventArgs e)
+        {
+            
+            for (int a = 0; a < 63; a++)
+            {    
+                labels[a] = new System.Windows.Forms.Label();
+            }
+           // labels[0] = this.label1;
+            labels[1] = this.label2;
+            labels[2] = this.label3;
+            labels[3] = this.label4;
+            labels[4] = this.label5;
+            labels[5] = this.label6;
+            labels[6] = this.label7;
+            labels[7] = this.label8;
+            labels[8] = this.label9;
+            labels[9] = this.label10;
+            labels[10] = this.label11;
+            labels[11] = this.label12;
+            labels[12] = this.label13;
+            labels[13] = this.label14;
+            labels[14] = this.label15;
+            labels[15] = this.label16;
+            labels[16] = this.label17;
+            labels[17] = this.label18;
+            labels[18] = this.label19;
+            labels[19] = this.label20;
+            labels[20] = this.label21;
+            labels[21] = this.label22;
+            labels[22] = this.label23;
+            labels[23] = this.label24;
+            labels[24] = this.label25;
+            labels[25] = this.label26;
+            labels[26] = this.label27;
+            labels[27] = this.label28;
+            labels[28] = this.label29;
+            labels[29] = this.label30;
+            labels[30] = this.label31;
+            labels[31] = this.label32;
+            labels[32] = this.label33;
+            labels[33] = this.label34;
+            labels[34] = this.label35;
+            labels[35] = this.label36;
+            labels[36] = this.label37;
+            labels[37] = this.label38;
+            labels[38] = this.label39;
+            labels[39] = this.label40;
+            labels[40] = this.label41;
+            labels[41] = this.label42;
+            labels[42] = this.label43;
+            labels[43] = this.label44;
+            labels[44] = this.label45;
+            labels[45] = this.label46;
+            labels[46] = this.label47;
+            labels[47] = this.label48;
+            labels[48] = this.label49;
+            labels[49] = this.label50;
+            labels[50] = this.label51;
+            labels[51] = this.label52;
+            labels[52] = this.label53;
+            labels[53] = this.label54;
+            labels[54] = this.label55;
+            labels[55] = this.label56;
+            labels[56] = this.label57;
+            labels[57] = this.label58;
+            labels[58] = this.label59;
+            labels[59] = this.label60;
+            labels[60] = this.label61;
+            labels[61] = this.label62;
+        }
+
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             string message = "Yakin ingin keluar dari Scramble Draw?";
@@ -78,85 +151,92 @@ namespace Drawing_Team_TC_Label
                     name[i] = name[j];
                     name[j] = temp;
                 }
-                convertImage(name);
-                this.label1.Text = name[0];
+                //convertImage(name);
 
-                this.label2.Text = name[1];
+                // ___ERROR__
+                // labels[1].Text = name[0]; masih error
+                // labels[] is null
+                // ___END ERROR___
+
+                int n = 2;
+                this.Controls["label" + n.ToString()].Text = "Test";
+                //this.label1.Text = name[0]; ------------> sudah dihaoys 
+
+                //this.label2.Text = name[1];
                 //this.label2.BackgroundImage = global::Scramble_Team_Sumo_TC_2018.Properties.Resources.bl1;
                 //this.label2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 
-                this.label3.Text = name[2];
+                //this.label3.Text = name[2];
 
-                this.label4.Text = name[3];
+                //this.label4.Text = name[3];
 
-                this.label5.Text = name[4];
+                //this.label5.Text = name[4];
 
-                this.label6.Text = name[5];
+                //this.label6.Text = name[5];
 
-                this.label7.Text = name[6];
+                //this.label7.Text = name[6];
 
-                this.label8.Text = name[7];
+                //this.label8.Text = name[7];
 
-                this.label9.Text = name[8];
+                //this.label9.Text = name[8];
 
-                this.label10.Text = name[9];
+                //this.label10.Text = name[9];
 
-                this.label11.Text = name[10];
+                //this.label11.Text = name[10];
 
-                this.label12.Text = name[11];
+                //this.label12.Text = name[11];
 
-                this.label13.Text = name[12];
+                //this.label13.Text = name[12];
 
-                this.label14.Text = name[13];
-                this.label15.Text = name[14];
+                //this.label14.Text = name[13];
+                //this.label15.Text = name[14];
 
-                this.label16.Text = name[15];
+                //this.label16.Text = name[15];
 
-                this.label17.Text = name[16];
+                //this.label17.Text = name[16];
 
-                this.label18.Text = name[17];
+                //this.label18.Text = name[17];
 
-                this.label19.Text = name[18];
-
-
-                this.label20.Text = name[19];
+                //this.label19.Text = name[18];
 
 
-                this.label21.Text = name[20];
+                //this.label20.Text = name[19];
 
 
-                this.label22.Text = name[21];
+                //this.label21.Text = name[20];
 
 
-                this.label23.Text = name[22];
+                //this.label22.Text = name[21];
 
 
-                this.label24.Text = name[23];
+                //this.label23.Text = name[22];
 
 
-                this.label25.Text = name[24];
+                //this.label24.Text = name[23];
 
 
-                this.label26.Text = name[25];
+                //this.label25.Text = name[24];
 
 
-                this.label27.Text = name[26];
+                //this.label26.Text = name[25];
 
 
-                this.label28.Text = name[27];
+                //this.label27.Text = name[26];
 
 
-                this.label29.Text = name[28];
+                //this.label28.Text = name[27];
 
 
-                this.label30.Text = name[29];
+                //this.label29.Text = name[28];
 
 
-                this.label31.Text = name[30];
+                //this.label30.Text = name[29];
 
 
-                this.label32.Text = name[31];
+                //this.label31.Text = name[30];
 
+
+                //this.label32.Text = name[31];
             }
         }
         //
