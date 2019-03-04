@@ -18,3 +18,23 @@ D:\KMTETI\Technocorner 2019\Scramble-Team-Sumo-TC-2018-edittttt\Scramble Team Su
 D:\KMTETI\Technocorner 2019\Scramble-Team-Sumo-TC-2018-edittttt\Scramble Team Sumo TC 2018\obj\Debug\Scramble Team Sumo TC 2018.csproj.CoreCompileInputs.cache
 D:\KMTETI\Technocorner 2019\Scramble-Team-Sumo-TC-2018-edittttt\Scramble Team Sumo TC 2018\obj\Debug\Scramble Team Sumo TC 2018.exe
 D:\KMTETI\Technocorner 2019\Scramble-Team-Sumo-TC-2018-edittttt\Scramble Team Sumo TC 2018\obj\Debug\Scramble Team Sumo TC 2018.pdb
+D:\KMTETI\Technocorner 2019\Scramble-Team-Sumo-TC-2018-edittttt - Copy\Scramble Team Sumo TC 2018\bin\Debug\Scramble Team Sumo TC 2018.exe.config
+D:\KMTETI\Technocorner 2019\Scramble-Team-Sumo-TC-2018-edittttt - Copy\Scramble Team Sumo TC 2018\bin\Debug\Scramble Team Sumo TC 2018.exe
+D:\KMTETI\Technocorner 2019\Scramble-Team-Sumo-TC-2018-edittttt - Copy\Scramble Team Sumo TC 2018\bin\Debug\Scramble Team Sumo TC 2018.pdb
+D:\KMTETI\Technocorner 2019\Scramble-Team-Sumo-TC-2018-edittttt - Copy\Scramble Team Sumo TC 2018\obj\Debug\Scramble Team Sumo TC 2018.csprojAssemblyReference.cache
+D:\KMTETI\Technocorner 2019\Scramble-Team-Sumo-TC-2018-edittttt - Copy\Scramble Team Sumo TC 2018\obj\Debug\Drawing_Team_TC_Label.Form1.resources
+D:\KMTETI\Technocorner 2019\Scramble-Team-Sumo-TC-2018-edittttt - Copy\Scramble Team Sumo TC 2018\obj\Debug\Scramble_Team_Sumo_TC_2018.Properties.Resources.resources
+D:\KMTETI\Technocorner 2019\Scramble-Team-Sumo-TC-2018-edittttt - Copy\Scramble Team Sumo TC 2018\obj\Debug\Scramble Team Sumo TC 2018.csproj.GenerateResource.cache
+D:\KMTETI\Technocorner 2019\Scramble-Team-Sumo-TC-2018-edittttt - Copy\Scramble Team Sumo TC 2018\obj\Debug\Scramble Team Sumo TC 2018.csproj.CoreCompileInputs.cache
+D:\KMTETI\Technocorner 2019\Scramble-Team-Sumo-TC-2018-edittttt - Copy\Scramble Team Sumo TC 2018\obj\Debug\Scramble Team Sumo TC 2018.exe
+D:\KMTETI\Technocorner 2019\Scramble-Team-Sumo-TC-2018-edittttt - Copy\Scramble Team Sumo TC 2018\obj\Debug\Scramble Team Sumo TC 2018.pdb
+D:\KMTETI\Technocorner 2019\Scramble Sumo TC 19\Scramble Team Sumo TC 2018\bin\Debug\Scramble Team Sumo TC 2018.exe.config
+D:\KMTETI\Technocorner 2019\Scramble Sumo TC 19\Scramble Team Sumo TC 2018\bin\Debug\Scramble Team Sumo TC 2018.exe
+D:\KMTETI\Technocorner 2019\Scramble Sumo TC 19\Scramble Team Sumo TC 2018\bin\Debug\Scramble Team Sumo TC 2018.pdb
+D:\KMTETI\Technocorner 2019\Scramble Sumo TC 19\Scramble Team Sumo TC 2018\obj\Debug\Scramble Team Sumo TC 2018.csprojAssemblyReference.cache
+D:\KMTETI\Technocorner 2019\Scramble Sumo TC 19\Scramble Team Sumo TC 2018\obj\Debug\Drawing_Team_TC_Label.Form1.resources
+D:\KMTETI\Technocorner 2019\Scramble Sumo TC 19\Scramble Team Sumo TC 2018\obj\Debug\Scramble_Team_Sumo_TC_2018.Properties.Resources.resources
+D:\KMTETI\Technocorner 2019\Scramble Sumo TC 19\Scramble Team Sumo TC 2018\obj\Debug\Scramble Team Sumo TC 2018.csproj.GenerateResource.cache
+D:\KMTETI\Technocorner 2019\Scramble Sumo TC 19\Scramble Team Sumo TC 2018\obj\Debug\Scramble Team Sumo TC 2018.csproj.CoreCompileInputs.cache
+D:\KMTETI\Technocorner 2019\Scramble Sumo TC 19\Scramble Team Sumo TC 2018\obj\Debug\Scramble Team Sumo TC 2018.exe
+D:\KMTETI\Technocorner 2019\Scramble Sumo TC 19\Scramble Team Sumo TC 2018\obj\Debug\Scramble Team Sumo TC 2018.pdb

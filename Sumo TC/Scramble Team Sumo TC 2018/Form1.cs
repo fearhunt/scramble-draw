@@ -13,6 +13,13 @@ namespace Drawing_Team_TC_Label
     public partial class Form1 : Form
     {
         public bool isStart = false;
+        public bool isStartR2 = false;
+        public bool isStartR3 = false;
+        public bool isStartSF = false;
+        public bool nextR = false;
+        public bool[] round1 = new bool[16];
+        public bool[] round2 = new bool[8];
+        public bool[] semiFinal = new bool[4];
 
         public Form1()
         {
@@ -23,79 +30,6 @@ namespace Drawing_Team_TC_Label
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        public Label[] labels = new Label[63];
-       // public labels = new System.Windows.Forms.Label[63];
-        private void MyForm_Load(object sender, EventArgs e)
-        {
-            
-            for (int a = 0; a < 63; a++)
-            {    
-                labels[a] = new System.Windows.Forms.Label();
-            }
-           // labels[0] = this.label1;
-            labels[1] = this.label2;
-            labels[2] = this.label3;
-            labels[3] = this.label4;
-            labels[4] = this.label5;
-            labels[5] = this.label6;
-            labels[6] = this.label7;
-            labels[7] = this.label8;
-            labels[8] = this.label9;
-            labels[9] = this.label10;
-            labels[10] = this.label11;
-            labels[11] = this.label12;
-            labels[12] = this.label13;
-            labels[13] = this.label14;
-            labels[14] = this.label15;
-            labels[15] = this.label16;
-            labels[16] = this.label17;
-            labels[17] = this.label18;
-            labels[18] = this.label19;
-            labels[19] = this.label20;
-            labels[20] = this.label21;
-            labels[21] = this.label22;
-            labels[22] = this.label23;
-            labels[23] = this.label24;
-            labels[24] = this.label25;
-            labels[25] = this.label26;
-            labels[26] = this.label27;
-            labels[27] = this.label28;
-            labels[28] = this.label29;
-            labels[29] = this.label30;
-            labels[30] = this.label31;
-            labels[31] = this.label32;
-            labels[32] = this.label33;
-            labels[33] = this.label34;
-            labels[34] = this.label35;
-            labels[35] = this.label36;
-            labels[36] = this.label37;
-            labels[37] = this.label38;
-            labels[38] = this.label39;
-            labels[39] = this.label40;
-            labels[40] = this.label41;
-            labels[41] = this.label42;
-            labels[42] = this.label43;
-            labels[43] = this.label44;
-            labels[44] = this.label45;
-            labels[45] = this.label46;
-            labels[46] = this.label47;
-            labels[47] = this.label48;
-            labels[48] = this.label49;
-            labels[49] = this.label50;
-            labels[50] = this.label51;
-            labels[51] = this.label52;
-            labels[52] = this.label53;
-            labels[53] = this.label54;
-            labels[54] = this.label55;
-            labels[55] = this.label56;
-            labels[56] = this.label57;
-            labels[57] = this.label58;
-            labels[58] = this.label59;
-            labels[59] = this.label60;
-            labels[60] = this.label61;
-            labels[61] = this.label62;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -113,144 +47,171 @@ namespace Drawing_Team_TC_Label
                 e.Cancel = true;
             }
         }
-        //convert to image 
-        //public void convertImage(string[] name)
-        //{
-        //    string temp;
-        //    int tempNum;
 
-        //    for (int a = 0; a < 32; a++)
-        //    {
-        //        temp = temp.Remove(0, 5);
-        //        tempNum = Convert.ToInt32(temp);
+        public void checkRound()
+        {
+            int a;
 
-        //        //backgrund
-        //    }
-        //}
+            if (isStartR2 == false)
+            {
+                for (a = 0; a < 16; a++)
+                {
+                    if (round1[a] == false)
+                    {
+                        break;
+                    }
+                }
+                if (a == 16) //tandanya semua true
+                {
+                    isStartR2 = true;
+                    nextR = true;
+                    isStart = false;
+                    button1.BackColor = Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(115)))), ((int)(((byte)(5)))));
+                    button1.ForeColor = Color.Maroon;
+                    button1.Enabled = true;
+                    
+                }
+            }
+            if (isStartR3 == false)
+            {
+                for (a = 0; a < 8; a++)
+                {
+                    if (round2[a] == false)
+                    {
+                        break;
+                    }
+                }
+                if (a == 8) //tandanya semua true
+                {
+                    isStartR3 = true;
+                    nextR = true;
+                    isStart = false;
+                    button1.BackColor = Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(115)))), ((int)(((byte)(5)))));
+                    button1.ForeColor = Color.Maroon;
+                    button1.Enabled = true;
+                    
+                }
+            }
+            if (isStartSF == false)
+            {
+                for (a = 0; a < 4; a++)
+                {
+                    if (round2[a] == false)
+                    {
+                        break;
+                    }
+                }
+                if (a == 4) //tandanya semua true
+                {
+                    isStartSF = true;
+                    nextR = true;
+                    isStart = false;
+                    button1.BackColor = Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(115)))), ((int)(((byte)(5)))));
+                    button1.ForeColor = Color.Maroon;
+                    button1.Enabled = true;
+
+                }
+            }
+        }
+
+        string[] name = new string[32];
 
         public void button1_Click(object sender, EventArgs e)
         {
+            int i;
+            
+
             if (isStart)
             {
                 //DRAW button does nothin
             }
             else
             {
+                //   this.pictureBox5.Image = global::Scramble_Team_Sumo_TC_2018.Properties.Resources._1;
+                //   this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
                 string temp;
-                string[] name = new string[32];
+                int range = name.Length;
 
-                for (int i = 0; i < name.Length; i++)
+                if ((isStartR2 == false) && (isStartR3 == false))
                 {
-                    name[i] = "Team" + " " + (i + 1);
+                    for (i = 0; i < name.Length; i++)
+                    {
+                        name[i] = "Team" + " " + (i + 1);
+                    }
                 }
-                Random rand = new Random();
-                for (int i = 0; i < name.Length; i++)
+
+                if (isStartR2 || isStartR3)
                 {
-                    int j = rand.Next(i, name.Length);
+                    if (isStartR2)
+                    {
+                        range /= 2;
+                    }
+                    else if (isStartR3)
+                    {
+                        range /= 4;
+                    }
+                    else if (isStartSF)
+                    {
+                        range /= 8;
+                    }
+                    if (nextR)
+                    {
+                        //insisasi ulang
+                        
+                        nextR = false;
+                        for (i = 0; i < range; i++)
+                        {
+                            if (isStartR2 == true)
+                            {
+                                name[i] = this.Controls["label" + (i + 33).ToString()].Text;
+                            }
+                            else if (isStartR3 == true)
+                            {
+                                name[i] = this.Controls["label" + (i + 49).ToString()].Text;
+                            }
+                        }
+                    }                    
+                }
+
+                Random rand = new Random();
+                for (i = 0; i < range; i++)
+                {
+                    int j = rand.Next(i, range);
                     temp = name[i];
                     name[i] = name[j];
                     name[j] = temp;
+
+                    if ((isStartR2 == false) && (isStartR3 == false))
+                    {
+                        this.Controls["label" + (i + 1).ToString()].Text = name[i];
+                    }
+                    else if (isStartR2)
+                    {
+                        this.Controls["label" + (i + 33).ToString()].Text = name[i];
+                    }
+                    else if (isStartR3)
+                    {
+                        this.Controls["label" + (i + 49).ToString()].Text = name[i];
+                    }
+                    else if (isStartSF)
+                    {
+                        this.Controls["label" + (i + 57).ToString()].Text = name[i];
+                    }           
                 }
-                //convertImage(name);
-
-                // ___ERROR__
-                // labels[1].Text = name[0]; masih error
-                // labels[] is null
-                // ___END ERROR___
-
-                int n = 2;
-                this.Controls["label" + n.ToString()].Text = "Test";
-                //this.label1.Text = name[0]; ------------> sudah dihaoys 
-
-                //this.label2.Text = name[1];
-                //this.label2.BackgroundImage = global::Scramble_Team_Sumo_TC_2018.Properties.Resources.bl1;
-                //this.label2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-
-                //this.label3.Text = name[2];
-
-                //this.label4.Text = name[3];
-
-                //this.label5.Text = name[4];
-
-                //this.label6.Text = name[5];
-
-                //this.label7.Text = name[6];
-
-                //this.label8.Text = name[7];
-
-                //this.label9.Text = name[8];
-
-                //this.label10.Text = name[9];
-
-                //this.label11.Text = name[10];
-
-                //this.label12.Text = name[11];
-
-                //this.label13.Text = name[12];
-
-                //this.label14.Text = name[13];
-                //this.label15.Text = name[14];
-
-                //this.label16.Text = name[15];
-
-                //this.label17.Text = name[16];
-
-                //this.label18.Text = name[17];
-
-                //this.label19.Text = name[18];
-
-
-                //this.label20.Text = name[19];
-
-
-                //this.label21.Text = name[20];
-
-
-                //this.label22.Text = name[21];
-
-
-                //this.label23.Text = name[22];
-
-
-                //this.label24.Text = name[23];
-
-
-                //this.label25.Text = name[24];
-
-
-                //this.label26.Text = name[25];
-
-
-                //this.label27.Text = name[26];
-
-
-                //this.label28.Text = name[27];
-
-
-                //this.label29.Text = name[28];
-
-
-                //this.label30.Text = name[29];
-
-
-                //this.label31.Text = name[30];
-
-
-                //this.label32.Text = name[31];
             }
         }
         //
         //left tree
         //
-        //private void label1_Click(object sender, EventArgs e)
-        //{ 
-        //    isStart = true;
-        //    button1.BackColor = Color.FromArgb(175, Color.FromArgb(254, 115, 5));
-        //    button1.ForeColor = Color.Black;
-        //    button1.Enabled = false;
-        //    this.label33.Text = this.label1.Text;
-            
-        //}
+        private void label1_Click(object sender, EventArgs e)
+        { 
+            isStart = true;
+            button1.BackColor = Color.FromArgb(175, Color.FromArgb(254, 115, 5));
+            button1.ForeColor = Color.Black;
+            button1.Enabled = false;
+            this.label33.Text = this.label1.Text;
+            round1[0] = true;
+        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -259,178 +220,218 @@ namespace Drawing_Team_TC_Label
             button1.ForeColor = Color.Black;
             button1.Enabled = false;
             this.label33.Text = this.label2.Text;
-            
+            round1[0] = true;
         }
         private void label3_Click(object sender, EventArgs e)
         {
             this.label34.Text = this.label3.Text;
-            
+            round1[1] = true;
         }
         private void label4_Click(object sender, EventArgs e)
         {
             this.label34.Text = this.label4.Text;
-            
+            round1[1] = true;
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
             this.label35.Text = this.label5.Text;
-         
+            round1[2] = true;
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
             this.label35.Text = this.label6.Text;
-            
+            round1[2] = true;
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
             this.label36.Text = this.label7.Text;
-            
+            round1[3] = true;
         }
 
         private void label8_Click(object sender, EventArgs e)
         {
             this.label36.Text = this.label8.Text;
-            
+            round1[3] = true;
         }
 
         private void label9_Click(object sender, EventArgs e)
         {
             this.label37.Text = this.label9.Text;
-            
+            round1[4] = true;
         }
 
         private void label10_Click(object sender, EventArgs e)
         {
             this.label37.Text = this.label10.Text;
-            
+            round1[4] = true;
         }
 
         private void label11_Click(object sender, EventArgs e)
         {
             this.label38.Text = this.label11.Text;
-            
+            round1[5] = true; 
         }
 
         private void label12_Click(object sender, EventArgs e)
         {
             this.label38.Text = this.label12.Text;
-            
+            round1[5] = true;
         }
 
         private void label13_Click(object sender, EventArgs e)
         {
             this.label39.Text = this.label13.Text;
-            
+            round1[6] = true;
         }
 
         private void label14_Click(object sender, EventArgs e)
         {
             this.label39.Text = this.label14.Text;
-            
+            round1[6] = true;
         }
 
         private void label15_Click(object sender, EventArgs e)
         {
             this.label40.Text = this.label15.Text;
-            
+            round1[7] = true;
+            checkRound();
         }
 
         private void label16_Click(object sender, EventArgs e)
         {
             this.label40.Text = this.label16.Text;
-            
+            round1[7] = true;
+            checkRound();
         }
 
         private void label33_Click(object sender, EventArgs e)
         {
+            isStart = true;
+            button1.BackColor = Color.FromArgb(175, Color.FromArgb(254, 115, 5));
+            button1.ForeColor = Color.Black;
+            button1.Enabled = false;
             this.label49.Text = this.label33.Text;
-            
+            round2[0] = true;
+            isStartR2 = false; //biar ga double logic
+            round1[0] = false; //biar ga double logic
         }
 
         private void label34_Click(object sender, EventArgs e)
         {
+            isStart = true;
+            button1.BackColor = Color.FromArgb(175, Color.FromArgb(254, 115, 5));
+            button1.ForeColor = Color.Black;
+            button1.Enabled = false;
             this.label49.Text = this.label34.Text;
-            
+            round2[0] = true;
+            isStartR2 = false; //biar ga double logic
+            round1[0] = false; //biar ga double logic
         }
 
         private void label35_Click(object sender, EventArgs e)
         {
             this.label50.Text = this.label35.Text;
-            
+            round2[1] = true;
         }
 
         private void label36_Click(object sender, EventArgs e)
         {
             this.label50.Text = this.label36.Text;
-            
+            round2[1] = true;
         }
 
         private void label37_Click(object sender, EventArgs e)
         {
             this.label51.Text = this.label37.Text;
-            
+            round2[2] = true;
         }
 
         private void label38_Click(object sender, EventArgs e)
         {
             this.label51.Text = this.label38.Text;
-            
+            round2[2] = true;
         }
 
         private void label39_Click(object sender, EventArgs e)
         {
             this.label52.Text = this.label39.Text;
-            
+            round2[3] = true;
+            checkRound();
         }
 
         private void label40_Click(object sender, EventArgs e)
         {
             this.label52.Text = this.label40.Text;
-            
+            round2[3] = true;
+            checkRound();
         }
 
         private void label49_Click(object sender, EventArgs e)
         {
+            isStart = true;
+            button1.BackColor = Color.FromArgb(175, Color.FromArgb(254, 115, 5));
+            button1.ForeColor = Color.Black;
+            button1.Enabled = false;
             this.label57.Text = this.label49.Text;
-            
         }
 
         private void label50_Click(object sender, EventArgs e)
         {
+            isStart = true;
+            button1.BackColor = Color.FromArgb(175, Color.FromArgb(254, 115, 5));
+            button1.ForeColor = Color.Black;
+            button1.Enabled = false;
             this.label57.Text = this.label50.Text;
-            
         }
 
         private void label51_Click(object sender, EventArgs e)
         {
+            isStart = true;
+            button1.BackColor = Color.FromArgb(175, Color.FromArgb(254, 115, 5));
+            button1.ForeColor = Color.Black;
+            button1.Enabled = false;
             this.label58.Text = this.label51.Text;
+            semiFinal[0] = true;
+            isStartR3 = false; //biar ga double logic
+            round2[0] = false; //biar ga double logic
+            
             
         }
 
         private void label52_Click(object sender, EventArgs e)
         {
+            isStart = true;
+            button1.BackColor = Color.FromArgb(175, Color.FromArgb(254, 115, 5));
+            button1.ForeColor = Color.Black;
+            button1.Enabled = false;
             this.label58.Text = this.label52.Text;
+            semiFinal[0] = true;
+            isStartR3 = false; //biar ga double logic
+            round2[0] = false; //biar ga double logic
+            
             
         }
 
         private void label57_Click(object sender, EventArgs e)
         {
             this.label61.Text = this.label57.Text;
-            
+            semiFinal[1] = true;
+            checkRound();
         }
 
         private void label58_Click(object sender, EventArgs e)
         {
             this.label61.Text = this.label58.Text;
-            
+            semiFinal[1] = true;
+            checkRound();
         }
 
         private void label61_Click(object sender, EventArgs e)
         {
-         //   this.label63.Text = this.label61.Text + "\n" + "Hore Menang";
+            this.label63.Text = this.label61.Text + "\n" + "Hore Menang";
             
         }
         //
@@ -443,7 +444,7 @@ namespace Drawing_Team_TC_Label
             button1.ForeColor = Color.Black;
             button1.Enabled = false;
             this.label41.Text = this.label17.Text;
-            
+            round1[8] = true;
         }
         
         private void label18_Click(object sender, EventArgs e)
@@ -453,155 +454,179 @@ namespace Drawing_Team_TC_Label
             button1.ForeColor = Color.Black;
             button1.Enabled = false;
             this.label41.Text = this.label18.Text;
-            
+            round1[8] = true;
         }
 
         private void label19_Click(object sender, EventArgs e)
         {
             this.label42.Text = this.label19.Text;
-            
+            round1[9] = true;
         }
 
         private void label20_Click(object sender, EventArgs e)
         {
             this.label42.Text = this.label20.Text;
-            
+            round1[9] = true;
         }
 
         private void label21_Click(object sender, EventArgs e)
         {
             this.label43.Text = this.label21.Text;
-            
+            round1[10] = true;
         }
 
         private void label22_Click(object sender, EventArgs e)
         {
             this.label43.Text = this.label22.Text;
-            
+            round1[10] = true;
         }
 
         private void label23_Click(object sender, EventArgs e)
         {
             this.label44.Text = this.label23.Text;
-            
+            round1[11] = true;
         }
 
         private void label24_Click(object sender, EventArgs e)
         {
             this.label44.Text = this.label24.Text;
-            
+            round1[11] = true;
         }
 
         private void label25_Click(object sender, EventArgs e)
         {
             this.label45.Text = this.label25.Text;
-            
+            round1[12] = true;
         }
 
         private void label26_Click(object sender, EventArgs e)
         {
             this.label45.Text = this.label26.Text;
-            
+            round1[12] = true;
         }
 
         private void label27_Click(object sender, EventArgs e)
         {
             this.label46.Text = this.label27.Text;
-            
+            round1[13] = true;
+
         }
 
         private void label28_Click(object sender, EventArgs e)
         {
             this.label46.Text = this.label28.Text;
-            
+            round1[13] = true;
         }
 
         private void label29_Click(object sender, EventArgs e)
         {
             this.label47.Text = this.label29.Text;
-            
+            round1[14] = true;   
         }
 
         private void label30_Click(object sender, EventArgs e)
         {
             this.label47.Text = this.label30.Text;
-            
+            round1[14] = true;
         }
 
         private void label31_Click(object sender, EventArgs e)
         {
             this.label48.Text = this.label31.Text;
-            
+            round1[15] = true;
+            checkRound();
         }
 
         private void label32_Click(object sender, EventArgs e)
         {
             this.label48.Text = this.label32.Text;
-            
+            round1[15] = true;
+            checkRound();
         }
 
         private void label41_Click(object sender, EventArgs e)
         {
+            isStart = true;
+            button1.BackColor = Color.FromArgb(175, Color.FromArgb(254, 115, 5));
+            button1.ForeColor = Color.Black;
+            button1.Enabled = false;
             this.label53.Text = this.label41.Text;
-            
+            round2[4] = true;
+            isStartR2 = false; //biar ga double logic
+            round1[0] = false; //biar ga double logic
         }
 
         private void label42_Click(object sender, EventArgs e)
         {
+            isStart = true;
+            button1.BackColor = Color.FromArgb(175, Color.FromArgb(254, 115, 5));
+            button1.ForeColor = Color.Black;
+            button1.Enabled = false;
             this.label53.Text = this.label42.Text;
-            
+            round2[4] = true;
+            isStartR2 = false; //biar ga double logic
+            round1[0] = false; //biar ga double logic
         }
 
         private void label43_Click(object sender, EventArgs e)
         {
             this.label54.Text = this.label43.Text;
-            
+            round2[5] = true;
         }
 
         private void label44_Click(object sender, EventArgs e)
         {
             this.label54.Text = this.label44.Text;
-            
+            round2[5] = true;
         }
 
         private void label45_Click(object sender, EventArgs e)
         {
             this.label55.Text = this.label45.Text;
-            
+            round2[6] = true;
         }
 
         private void label46_Click(object sender, EventArgs e)
         {
             this.label55.Text = this.label46.Text;
-            
+            round2[6] = true;
         }
 
         private void label47_Click(object sender, EventArgs e)
         {
             this.label56.Text = this.label47.Text;
-            
+            round2[7] = true;
+            checkRound();
         }
 
         private void label48_Click(object sender, EventArgs e)
         {
             this.label56.Text = this.label48.Text;
-            
+            round2[7] = true;
+            checkRound();
         }
 
         private void label53_Click(object sender, EventArgs e)
         {
+            isStart = true;
+            button1.BackColor = Color.FromArgb(175, Color.FromArgb(254, 115, 5));
+            button1.ForeColor = Color.Black;
+            button1.Enabled = false;
             this.label59.Text = this.label53.Text;
-            
         }
 
         private void label54_Click(object sender, EventArgs e)
         {
+            isStart = true;
+            button1.BackColor = Color.FromArgb(175, Color.FromArgb(254, 115, 5));
+            button1.ForeColor = Color.Black;
+            button1.Enabled = false;
             this.label59.Text = this.label54.Text;
-            
         }
 
         private void label55_Click(object sender, EventArgs e)
         {
+
             this.label60.Text = this.label55.Text;
             
         }
@@ -626,8 +651,9 @@ namespace Drawing_Team_TC_Label
 
         private void label62_Click(object sender, EventArgs e)
         {
-      //      this.label63.Text = this.label62.Text + "\n" + "Hore Menang";
+            this.label63.Text = this.label62.Text + "\n" + "Hore Menang";
             
         }
+
     }
 }
